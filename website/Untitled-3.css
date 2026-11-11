@@ -1,0 +1,71 @@
+.adbox{
+    background-image:linear-gradient(cyan,blue,navy);
+    color:white;
+    width: 300px;
+    padding:400px;
+    text-align:center;
+    position: fixed;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: disappear 8s forwards;
+    z-index: 9999;
+    border-radius: 5%;
+    
+}
+@keyframes disappear{
+    0%, 99%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }}
+.container{
+        position:relative;
+        width: 100%;
+    
+    }
+    .container img{
+        display: block;
+        width: 65%;
+        height: 50%;
+        border-top-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+    
+    }
+.overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+    backdrop-filter: blur(5px);
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.container:hover .overlay{
+    opacity:1;
+    
+}
+p{
+    font-size: larger;
+    
+}
+h1{colour:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.logo{
+    position: absolute;
+    top: 10px;
+    left:10px;
+    width:150px;
+    height: auto;
+}
